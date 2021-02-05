@@ -7,6 +7,7 @@ defmodule Mates.CLI do
     operacion = "#{Atom.to_string(operation)}"
 
     IO.puts("El resultado de #{n1} #{operacion} #{n2} es igual a: #{resultado}")
+    System.halt(0)
   end
 
   defp operate(operation, {n1, n2}) do
