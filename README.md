@@ -1,6 +1,6 @@
 # Mates
 
-**TODO: Add description**
+Proyecto Mates que hemos creado para el curso de Elixir que estoy llevando adelante en [youtube](https://www.youtube.com/watch?v=-K74G9nlzSY&list=PLMLox3fRb_I4_4-DnU3yS_EglDAuVpeEg)
 
 ## Installation
 
