@@ -1,13 +1,17 @@
 defmodule Mates.CLI do
   def start() do
     [n1, n2] = IO.gets("Ingresa dos numeros: ") |> parse_number_input()
-    operation = IO.gets("Ingresa una operacion (+ - * /): ") |> parse_operation()
+
+    operation =
+      IO.gets("Ingresa una operacion o q para terminar (+ - * /): ") |> parse_operation()
+
     resultado = operate(operation, {n1, n2})
 
     operacion = "#{Atom.to_string(operation)}"
 
     IO.puts("El resultado de #{n1} #{operacion} #{n2} es igual a: #{resultado}")
-    System.halt(0)
+
+    start()
   end
 
   defp operate(operation, {n1, n2}) do
@@ -17,6 +21,7 @@ defmodule Mates.CLI do
         :- -> Mates.resta(n1, n2)
         :* -> Mates.multiplicar(n1, n2)
         :/ -> Mates.dividir(n1, n2)
+        :q -> System.halt(0)
       end
 
     case_return
